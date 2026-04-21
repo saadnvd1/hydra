@@ -1,0 +1,13 @@
+providers:
+  - name: fake-limited
+    command: ./test/fake-limit.sh
+    args: []
+
+  - name: fake-ok
+    command: ./test/fake-ok.sh
+    args: []
+
+limit_patterns:
+  - "rate limit"
+  - "quota exceeded"
+  - "usage limit"

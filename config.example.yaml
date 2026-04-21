@@ -1,0 +1,58 @@
+# hydra config
+# Copy to ~/.config/hydra/config.yaml
+
+providers:
+  # Primary: Claude Code (bypass all permissions)
+  - name: claude
+    command: claude
+    args: ["--dangerously-skip-permissions"]
+    env: {}
+
+  # Fallback 1: OpenCode (Gemini 2.5 Flash — free, 1500 req/day, 1M context)
+  - name: opencode
+    command: opencode
+    args: ["-m", "google/gemini-2.5-flash"]
+    env:
+      OPENCODE_PERMISSION: '{"*":"allow"}'
+
+  # Fallback 2: Codex (full auto)
+  - name: codex
+    command: codex
+    args: ["--full-auto"]
+    env: {}
+
+  # Fallback 3: Pi (Gemini 2.5 Flash — free)
+  # If your CLI is installed via nvm, you may need the full path:
+  #   command: /path/to/.nvm/versions/node/v20.19.0/bin/pi
+  - name: pi
+    command: pi
+    args: ["--model", "gemini-2.5-flash"]
+    env: {}
+
+# Patterns in terminal output that indicate a limit/quota error.
+# Case-insensitive. Sourced from actual CLI source code.
+limit_patterns:
+  # Claude Code
+  - "rate limit"
+  - "credit balance is too low"
+  - "overloaded"
+  - "high load"
+  - "usage limit"
+  # OpenCode
+  - "free usage exceeded"
+  - "insufficient_quota"
+  - "too many requests"
+  - "provider is overloaded"
+  # Codex
+  - "quota exceeded"
+  - "at capacity"
+  - "high demand"
+  - "context window exceeded"
+  # Generic
+  - "overloaded_error"
+
+# Key to manually trigger provider switch
+switch_key: "hydra switch"
+
+# Log file (default: ~/.local/share/hydra/sessions.log)
+log_file: ""
