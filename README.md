@@ -4,6 +4,14 @@ Unified wrapper for AI coding CLIs. Run Claude Code, Codex, OpenCode, or Pi as a
 
 Cut one head off, another takes its place.
 
+## Why
+
+AI coding CLIs are incredible, but every one of them has usage limits. Hit your Claude Code cap mid-task and you're stuck — copy context manually, open a different tool, re-explain everything, lose your flow.
+
+Hydra fixes this. You never stop coding because one provider ran out. Your fallback chain kicks in automatically, your context transfers with one paste, and you keep moving. No single provider becomes a bottleneck, and you're never locked into one ecosystem.
+
+The free tiers alone (Gemini via OpenCode/Pi = 3000 req/day combined) mean you can code all day even after burning through paid limits.
+
 ## Install
 
 ```bash
