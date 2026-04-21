@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #1a1b26;
+    color: #a9b1d6;
+    font-family: "SF Mono", "Menlo", "Monaco", monospace;
+    font-size: 13px;
+    line-height: 1.5;
+    width: 1280px;
+    height: 720px;
+    overflow: hidden;
+  }
+  .window {
+    background: #1a1b26;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 1280px;
+    height: 720px;
+    display: flex;
+    flex-direction: column;
+  }
+  .titlebar {
+    background: #24283b;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+  .dot { width: 12px; height: 12px; border-radius: 50%; }
+  .dot-red { background: #f7768e; }
+  .dot-yellow { background: #e0af68; }
+  .dot-green { background: #9ece6a; }
+  .titlebar-text { color: #565f89; font-size: 12px; margin-left: 8px; }
+  .content { padding: 16px 22px; overflow: hidden; flex: 1; }
+  pre { font-family: inherit; font-size: inherit; line-height: inherit; white-space: pre; }
+
+  .prompt { color: #7aa2f7; }
+  .green { color: #9ece6a; }
+  .red { color: #f7768e; }
+  .yellow { color: #e0af68; }
+  .cyan { color: #7dcfff; }
+  .white { color: #c0caf5; }
+  .dim { color: #565f89; }
+  .bold { font-weight: bold; }
+  .orange { color: #ff9e64; }
+  .magenta { color: #bb9af7; }
+</style>
+</head>
+<body>
+<div class="window">
+  <div class="titlebar">
+    <div class="dot dot-red"></div>
+    <div class="dot dot-yellow"></div>
+    <div class="dot dot-green"></div>
+    <span class="titlebar-text">~/dev/myproject — hydra</span>
+  </div>
+  <div class="content">
+    <pre><span class="dim">$</span> <span class="white bold">hydra</span>
+<span class="dim">───────────────────────────────────────────────────</span>
+ <span class="magenta bold">Claude Code</span> <span class="dim">v1.0.32</span>
+<span class="dim">───────────────────────────────────────────────────</span>
+<span class="prompt bold">&gt;</span> <span class="white">refactor the auth middleware to use JWT with refresh tokens</span>
+
+<span class="cyan">⏺</span> I'll refactor the auth middleware. Reading the current implementation...
+
+<span class="dim">  Read: src/middleware/auth.ts</span>
+<span class="dim">  Edit: src/middleware/auth.ts (+42, -18)</span>
+<span class="dim">  Write: src/lib/jwt.ts</span>
+<span class="dim">  Edit: src/routes/login.ts (+8, -3)</span>
+
+<span class="green">✓</span> Updated auth middleware with access/refresh token flow. Running tests...
+
+<span class="yellow bold">⚡ Limit detected! Run `hydra switch` from another terminal</span>
+
+<span class="yellow bold">━━━ Provider Switch ━━━</span>
+<span class="yellow">claude — switching. Choose next:</span>
+
+  <span class="cyan">1</span>) opencode → opencode <span class="dim">(google/gemini-2.5-flash — free)</span>
+  <span class="cyan">2</span>) codex → codex
+  <span class="cyan">3</span>) pi → pi <span class="dim">(gemini-2.5-flash — free)</span>
+  <span class="cyan">q</span>) quit
+
+<span class="yellow">Choice: </span><span class="white bold">1</span>
+
+<span class="yellow">⟳ Switching to opencode...</span>
+<span class="green">✓ Context copied to clipboard — paste it into the new session</span>
+<span class="dim">───────────────────────────────────────────────────</span>
+ <span class="green bold">OpenCode</span> <span class="dim">google/gemini-2.5-flash</span>
+<span class="dim">───────────────────────────────────────────────────</span>
+<span class="prompt bold">&gt;</span> <span class="dim">[pasted context — conversation + git diff + commits]</span>
+
+<span class="cyan">⏺</span> Continuing where Claude left off. The refresh token rotation test is
+  failing — fixing the expiry check now...</pre>
+  </div>
+</div>
+</body>
+</html>

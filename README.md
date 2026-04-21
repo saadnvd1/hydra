@@ -4,6 +4,8 @@ Unified wrapper for AI coding CLIs. Run Claude Code, Codex, OpenCode, or Pi as a
 
 Cut one head off, another takes its place.
 
+![hydra demo](assets/screenshot.png)
+
 ## Why
 
 AI coding CLIs are incredible, but every one of them has usage limits. Hit your Claude Code cap mid-task and you're stuck — copy context manually, open a different tool, re-explain everything, lose your flow.
